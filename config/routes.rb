@@ -1,6 +1,6 @@
 HeadFirtsPersonalTraining::Application.routes.draw do
   resources :client_workouts
-
+   match 'client_workouts/find' => 'ClientWorkouts#find'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -80,4 +80,8 @@ class ClientWorkoutsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def find 
+     
+     @client_workouts = ClientWorkout.find_all_by_client_name(params[:search_string])
+  end
 end
